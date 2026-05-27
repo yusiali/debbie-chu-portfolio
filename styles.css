@@ -376,10 +376,17 @@ h1, h2, h3 {
 .writing-item__title em { font-style: italic; }
 .writing-item__title a {
   color: var(--ink);
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 2px;
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-skip-ink: auto;
 }
-.writing-item__title a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+.writing-item__title a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
 .writing-item__excerpt {
   font-style: normal;
   color: var(--ink-soft);
