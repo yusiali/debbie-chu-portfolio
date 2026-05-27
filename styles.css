@@ -374,6 +374,12 @@ h1, h2, h3 {
   color: var(--ink);
 }
 .writing-item__title em { font-style: italic; }
+.writing-item__title a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+}
+.writing-item__title a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .writing-item__excerpt {
   font-style: normal;
   color: var(--ink-soft);
