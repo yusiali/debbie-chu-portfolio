@@ -4,24 +4,18 @@
 
 :root {
   --font-serif: "EB Garamond", "Adobe Garamond Pro", Georgia, serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --paper: #ffffff;
-  --paper-edge: #fafafa;
-  --paper-card: #fbfbfb;
   --ink: #1a1a1a;
-  --ink-soft: #3d3d3a;
-  --ink-muted: #7a766a;
-  --rule: #e4e1d8;
-  --rule-strong: #b8b3a4;
+  --ink-soft: #2f2f2c;
+  --ink-muted: #595650;
+  --rule: #d8d4c8;
+  --rule-strong: #a39e8d;
 
   --accent: #14315c;
   --accent-hover: #1f4a85;
   --accent-tint: #eef2f8;
-
-  --col-narrow: 640px;
-  --col-wide: 780px;
-  --gutter: 32px;
 }
 
 /* ---------- Base ---------- */
@@ -104,47 +98,51 @@ hr {
   white-space: nowrap;
 }
 .head__brand a { color: inherit; border: none; }
-.head__brand .dot { color: var(--accent); font-style: normal; }
 
 .head__nav {
   display: flex;
-  gap: 28px;
+  gap: 10px;
   font-family: var(--font-sans);
   font-size: 11.5px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-weight: 500;
 }
 .head__nav a {
   color: var(--ink-soft);
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
+  padding: 6px 12px;
+  border-radius: 3px;
+  border-bottom: none;
+  transition: background 140ms ease, color 140ms ease;
 }
-.head__nav a:hover { color: var(--accent); }
+.head__nav a:hover {
+  color: var(--accent);
+  background: var(--accent-tint);
+}
 .head__nav a.is-active {
-  color: var(--ink);
-  border-bottom-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-tint);
 }
 
 @media (max-width: 560px) {
   .head { gap: 12px; flex-wrap: wrap; }
-  .head__nav { gap: 14px; font-size: 10px; letter-spacing: 0.14em; }
+  .head__nav { gap: 4px; font-size: 10px; letter-spacing: 0.14em; }
+  .head__nav a { padding: 5px 8px; }
   .head__brand { font-size: 18px; }
 }
 @media (max-width: 380px) {
-  .head__nav { gap: 10px; }
+  .head__nav { gap: 2px; }
+  .head__nav a { padding: 5px 6px; }
 }
 
 /* ---------- Labels & headings ---------- */
-.eyebrow,
 .section-label {
   font-family: var(--font-sans);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ink-muted);
-  font-weight: 500;
-}
-.section-label {
+  color: var(--ink-soft);
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -179,12 +177,6 @@ h1, h2, h3 {
   font-size: clamp(17px, 2vw, 19px);
   max-width: 720px;
   margin: 0 0 64px;
-}
-
-h2.section {
-  font-size: 36px;
-  line-height: 1.15;
-  margin: 0 0 32px;
 }
 
 /* ---------- Hero ---------- */
@@ -533,20 +525,38 @@ h2.section {
 }
 
 /* ---------- CV ---------- */
+.cv-meta {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 20px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 14px;
+}
+.cv-meta__sep { color: var(--rule-strong); }
+@media (max-width: 480px) {
+  .cv-meta__sep { display: none; }
+}
+
 .cv-section { margin-bottom: 64px; }
 .cv-section h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin: 0 0 28px;
+  color: var(--ink);
 }
 .cv-row {
   display: grid;
   grid-template-columns: 140px 1fr 180px;
   gap: 24px;
-  padding: 18px 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--rule);
   align-items: baseline;
   font-size: 16px;
-  line-height: 1.45;
+  line-height: 1.5;
 }
 .cv-row:first-of-type { border-top: 1px solid var(--rule); }
 .cv-row__date {
@@ -558,15 +568,15 @@ h2.section {
   padding-top: 2px;
 }
 .cv-row__main { color: var(--ink); }
-.cv-row__title { font-size: 17px; font-weight: 500; color: var(--ink); }
+.cv-row__title { font-size: 18px; font-weight: 500; color: var(--ink); }
 .cv-row__title em { font-style: italic; font-weight: 400; }
 .cv-row__detail {
   font-style: italic;
   color: var(--ink-soft);
-  font-size: 15px;
-  margin-top: 4px;
+  font-size: 16px;
+  margin-top: 6px;
   display: block;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 .cv-row__place {
   font-family: var(--font-sans);
