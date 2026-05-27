@@ -175,7 +175,7 @@ h1, h2, h3 {
 }
 
 /* ---------- Hero ---------- */
-.hero { margin-bottom: 88px; }
+.hero { margin-bottom: 120px; }
 .hero--intro {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -238,11 +238,11 @@ h1, h2, h3 {
 @media (max-width: 640px) {
   .hero--intro { grid-template-columns: 1fr; gap: 24px; }
   .hero__avatar { max-width: 160px; }
-  .hero { margin-bottom: 64px; }
+  .hero { margin-bottom: 80px; }
 }
 
 /* ---------- About prose ---------- */
-.about-section { margin-bottom: 96px; }
+.about-section { margin-bottom: 128px; }
 .about-prose {
   max-width: 760px;
   font-size: 17px;
@@ -262,7 +262,7 @@ h1, h2, h3 {
 }
 
 @media (max-width: 640px) {
-  .about-section { margin-bottom: 64px; }
+  .about-section { margin-bottom: 88px; }
   .about-prose { font-size: 16.5px; }
   .about-prose .body-lead::first-letter { font-size: 46px; }
 }
