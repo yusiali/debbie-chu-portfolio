@@ -236,20 +236,11 @@ h1, h2, h3 {
 }
 .about-prose p:not(:last-child) { margin-bottom: 16px; }
 .about-prose em { color: var(--ink); font-style: italic; }
-.about-prose .body-lead::first-letter {
-  font-family: var(--font-serif);
-  font-size: 54px;
-  float: left;
-  line-height: 0.85;
-  margin: 4px 8px 0 -2px;
-  color: var(--accent);
-  font-weight: 400;
-}
+/* drop-cap intentionally removed: a lone "I" reads as a glyph error */
 
 @media (max-width: 640px) {
   .about-section { margin-bottom: 72px; }
   .about-prose { font-size: 16.5px; }
-  .about-prose .body-lead::first-letter { font-size: 46px; }
 }
 
 /* ---------- Experience entries ---------- */
