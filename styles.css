@@ -4,6 +4,7 @@
 
 :root {
   --font-serif: "EB Garamond", "Adobe Garamond Pro", Georgia, serif;
+  --font-display: "drummond", "EB Garamond", "Adobe Garamond Pro", Georgia, serif;
   --font-sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --paper: #ffffff;
@@ -13,9 +14,9 @@
   --rule: #d8d4c8;
   --rule-strong: #a39e8d;
 
-  --accent: #14315c;
-  --accent-hover: #1f4a85;
-  --accent-tint: #eef2f8;
+  --accent: #23568f;
+  --accent-hover: #2e6cb3;
+  --accent-tint: #eaf1fa;
 }
 
 /* ---------- Base ---------- */
@@ -90,7 +91,7 @@ hr {
 }
 
 .head__brand {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 22px;
   letter-spacing: 0.01em;
   font-weight: 500;
@@ -149,8 +150,8 @@ hr {
 }
 
 h1, h2, h3 {
-  font-family: var(--font-serif);
-  font-weight: 400;
+  font-family: var(--font-display);
+  font-weight: 500;
   margin: 0;
   letter-spacing: -0.01em;
   text-wrap: balance;
@@ -191,11 +192,11 @@ h1, h2, h3 {
 .hero__intro { padding-top: 4px; }
 
 .hi {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(34px, 5vw, 52px);
   line-height: 1.05;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  letter-spacing: -0.015em;
   margin: 0 0 24px;
 }
 .hi em { font-style: italic; color: var(--accent); }
@@ -210,11 +211,11 @@ h1, h2, h3 {
   margin: 0 0 18px;
 }
 .hi-tagline {
-  font-family: "Lora", "EB Garamond", Georgia, serif;
+  font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
-  font-size: clamp(18px, 1.9vw, 21px);
-  line-height: 1.55;
+  font-size: clamp(19px, 2vw, 22px);
+  line-height: 1.5;
   color: var(--ink-soft);
   max-width: 540px;
   margin: 0;
@@ -290,17 +291,18 @@ h1, h2, h3 {
   padding-top: 4px;
 }
 .exp-role {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 22px;
   line-height: 1.3;
   color: var(--ink);
   margin: 0 0 4px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .exp-role em { font-style: italic; color: var(--accent); }
 .exp-org {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-style: italic;
+  font-weight: 400;
   font-size: 16px;
   color: var(--ink-soft);
   margin: 0 0 10px;
@@ -379,11 +381,11 @@ h1, h2, h3 {
   font-weight: 500;
 }
 .writing-item__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(24px, 3.2vw, 30px);
   line-height: 1.2;
   margin: 0 0 12px;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--ink);
 }
 .writing-item__title em { font-style: italic; }
@@ -430,7 +432,6 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0;
-  border-top: 1px solid var(--rule);
 }
 .proj {
   display: grid;
@@ -440,6 +441,8 @@ h1, h2, h3 {
   border-bottom: 1px solid var(--rule);
   align-items: start;
 }
+.proj:first-child { padding-top: 8px; }
+.proj:last-child { border-bottom: none; }
 .proj__num {
   font-family: var(--font-sans);
   font-size: 11px;
@@ -450,12 +453,12 @@ h1, h2, h3 {
   font-weight: 500;
 }
 .proj__name {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(28px, 4.2vw, 38px);
   line-height: 1.1;
   margin: 0 0 8px;
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-weight: 500;
+  letter-spacing: -0.015em;
 }
 .proj__name em { font-style: italic; color: var(--accent); }
 .proj__role {
@@ -495,12 +498,12 @@ h1, h2, h3 {
   border-top: 1px solid var(--rule);
 }
 .proj__stat-num {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 36px;
   line-height: 1;
   color: var(--accent);
   display: block;
-  font-weight: 400;
+  font-weight: 500;
 }
 .proj__stat-label {
   font-family: var(--font-sans);
@@ -519,6 +522,10 @@ h1, h2, h3 {
 }
 
 /* ---------- CV ---------- */
+.cv-header { margin-bottom: 56px; }
+.cv-header .page-sub { margin-bottom: 16px; }
+.cv-header .cv-meta { margin-top: 0; }
+
 .cv-meta {
   font-family: var(--font-sans);
   font-size: 11.5px;
@@ -666,10 +673,11 @@ h1, h2, h3 {
   margin-bottom: 8px;
 }
 .preview-list .title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 22px;
   line-height: 1.25;
   font-style: italic;
+  font-weight: 400;
 }
 
 @media (max-width: 640px) {
